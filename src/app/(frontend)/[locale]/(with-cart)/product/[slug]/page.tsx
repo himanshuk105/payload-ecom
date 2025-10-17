@@ -33,11 +33,13 @@ const ProductPage = async ({
     if (docs.length === 0) {
       notFound();
     }
+    console.log(docs[0]);
+    console.log(variant);
 
     return (
       <>
         <ProductDetails variant={variant} product={docs[0]} />
-        <ProductDetail />
+        {/* <ProductDetail /> */}
       </>
     );
   } catch {

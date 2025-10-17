@@ -242,7 +242,7 @@ const ProductCategoryBlock = ({
             <Link
               key={i}
               className="cursor-pointer overflow-hidden rounded-xl bg-white shadow transition-all hover:shadow-md"
-              href={`/product/${p.id}`}
+              href={`/product/${p.slug}`}
             >
               <div className="relative aspect-square">
                 <img src={image || fallbackImage} alt={p.title || "Product"} className="object-cover" />

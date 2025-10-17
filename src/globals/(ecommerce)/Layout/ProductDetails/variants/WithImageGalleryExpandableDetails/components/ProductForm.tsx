@@ -193,12 +193,12 @@ export const ProductForm = ({
         </div>
       )}
 
-      <div className="mt-10 grid grid-cols-2 gap-y-4 sm:flex">
+      <div className="justify-between flex ">
         <button
           type="submit"
           disabled={!isProductAvailable}
           className={cn(
-            "focus:outline-hidden col-span-2 row-start-2 flex max-w-xs flex-1 items-center justify-center rounded-md border border-transparent bg-main-600 px-8 py-3 text-base font-medium text-white hover:bg-main-700 focus:ring-2 focus:ring-main-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full",
+            "focus:outline-hidden rounded-lg bg-[#ff6700] max-w-40 h-10 flex cursor-pointer  flex-1 items-center justify-center border border-transparent px-5 py-3 text-base font-medium text-white hover:bg-[#ff9248] focus:ring-2 focus:ring-main-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full",
             !isProductAvailable && "cursor-not-allowed opacity-25",
           )}
           onClick={(e) => {
@@ -217,11 +217,22 @@ export const ProductForm = ({
             }
           }}
         >
-          {isProductAvailable ? t("add-to-cart") : t("product-unavailable")}
+          {/* {isProductAvailable ? t("add-to-bag") : t("product-unavailable")} */}
+          Add to Bag
         </button>
 
-        <div className="flex">
-          <QuantityInput
+        <p className="text-[12px] flex flex-col items-end gap-2 flex-1 leading-2">
+  <span className="text-orange-500 font-semibold">Available immediately!</span>
+  <span className="font-semibold">Free <span className="font-normal text-orange-500 ">Shipping</span> within Croatia</span> 
+  <em>Delivery time: 1–5 working days (Shipments may differ)</em>
+</p>
+
+
+        
+
+
+        {/* <div className="flex">
+        <QuantityInput
             maxQuantity={maxQuantity}
             minQuantity={minQuantity}
             setQuantity={setQuantity}
@@ -252,8 +263,11 @@ export const ProductForm = ({
               <HeartIcon aria-hidden="true" className="size-6 shrink-0" />
             )}
             <span className="sr-only">{t("add-to-favs")}</span>
-          </button>
-        </div>
+          </button> 
+          
+        </div> */}
+
+
       </div>
       {overStock && (
         <p className="mt-4 text-red-500">

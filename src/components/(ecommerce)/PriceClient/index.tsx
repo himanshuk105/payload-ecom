@@ -6,11 +6,13 @@ import { formatPrice } from "@/utilities/formatPrices";
 
 export const PriceClient = ({
   pricing,
+  className
 }: {
   pricing: {
     value: number;
     currency: string;
   }[];
+  className?: string;
 }) => {
   const { currency } = useCurrency();
   const locale = useLocale();
@@ -19,5 +21,5 @@ export const PriceClient = ({
       ? (pricing.find((price) => price.currency === currency)?.value ?? pricing[0].value)
       : 0;
 
-  return <>{formatPrice(price, currency, locale)}</>;
+  return <span className={className}>{formatPrice(price, currency, locale)}</span>;
 };
