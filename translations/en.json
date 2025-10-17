@@ -5,7 +5,7 @@
   },
   "LocaleSwitch": {
     "label": "Change language",
-    "locale": "{locale, select, pl {Polish} en {English} other {Unknown}}"
+    "locale": "{locale, select, pl {Polish} en {English} hr {Croatian} other {Unknown}}"
   },
   "ProductDetails": {
     "add-to-cart": "Add to cart",

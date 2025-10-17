@@ -148,7 +148,7 @@ export interface Config {
     paywalls: PaywallsSelect<false> | PaywallsSelect<true>;
     fulfilment: FulfilmentSelect<false> | FulfilmentSelect<true>;
   };
-  locale: 'en' | 'pl';
+  locale: 'en' | 'pl' | 'hr';
   user:
     | (Administrator & {
         collection: 'administrators';

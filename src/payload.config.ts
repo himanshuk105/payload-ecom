@@ -7,6 +7,7 @@ import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
 import { buildConfig } from "payload";
 import { en } from "payload/i18n/en";
 import { pl } from "payload/i18n/pl";
+import { hr } from "payload/i18n/hr";
 import sharp from "sharp"; // sharp-import
 
 import { defaultLexical } from "@/fields/defaultLexical";
@@ -101,12 +102,12 @@ export default buildConfig({
     },
   },
   i18n: {
-    supportedLanguages: { en, pl },
+    supportedLanguages: { en, pl, hr },
     fallbackLanguage: "en",
     translations: customTranslationsObject,
   },
   localization: {
-    locales: ["en", "pl"],
+    locales: ["en", "pl", "hr"],
     defaultLocale: "en",
   },
   // This config helps us configure global or default features that the other editors can inherit
